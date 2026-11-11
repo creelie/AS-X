@@ -239,7 +239,7 @@ As meromorphic functions,
 \]
 \end{proposition}
 
-This identity is the case $m=1$ of the decomposition of $B^{m+1}/A$ into polar and finite parts; it is stated as $(B^2/A)^F=E_4A-288\,\cH$ in \cite[Section~3]{BM13}, where $(B^2/A)^F=B^2/A-144\,A_{2,1}$.\footnote{The polar part of $B^2/A$ is $144\,A_{2,1}$ because $B(\tau,0)^2=144$. Both sides of Proposition~\ref{prop:DMZ} have the same double poles; their difference is holomorphic in $z$ and transforms as a Jacobi form of weight two and index one up to the shadow of $\cH$, which is Zagier's weight-$\frac32$ Eisenstein series \cite{HZ76}. We have also checked the identity coefficient by coefficient for all exponents of $q$ up to $99$, expanding $A_{2,1}$ in the strip $-\operatorname{Im}\tau<\operatorname{Im}z<0$; the program is in the archive \cite{Bha26}.} We now derive the twined analogue.
+This identity is the case $m=1$ of the decomposition of $B^{m+1}/A$ into polar and finite parts; it is stated as $(B^2/A)^F=E_4A-288\,\cH$ in \cite[Section~3]{BM13}, where $(B^2/A)^F=B^2/A-144\,A_{2,1}$.\footnote{The polar part of $B^2/A$ is $144\,A_{2,1}$ because $B(\tau,0)^2=144$, so the difference of the two sides is holomorphic in $z$. Adding to $\cH$ Zagier's non-holomorphic correction makes it a Jacobi form of weight two and index one \cite{HZ76,Zag08}, and the completion of $A_{2,1}$ has the opposite non-holomorphic part \cite[Section~3]{BM13}; hence the difference is a weak Jacobi form of weight two and index one for $\mathrm{SL}_2(\ZZ)$, which by Lemma~\ref{lem:structure} below is a multiple of $E_4A$ (since $M_2(\mathrm{SL}_2(\ZZ))=0$), and comparing the coefficient of $q^0y^1$ shows that the multiple is zero. We have also checked the identity coefficient by coefficient for all exponents of $q$ up to $99$, expanding $A_{2,1}$ in the strip $-\operatorname{Im}\tau<\operatorname{Im}z<0$.} We now derive the twined analogue.
 
 \begin{proposition}\label{prop:W}
 Put $W_g=\bigl(X_{g,2}-\tfrac{d_g(2)}{144}(B^2-E_4A^2)\bigr)/A$. Then $W_g$ is holomorphic on $\HH\times\CC$, and
@@ -470,7 +470,7 @@ The right side is a sum of terms $m^{-\alpha}(1+\log m)^\beta$, $m^{-\alpha}$ an
 \end{proof}
 
 \subsection{The remaining coefficients}
-For $1\le m<11000$ the coefficients $a_m$ of the fourteen series $k_\mu$ are rational numbers that can be computed exactly from \eqref{eq:R}--\eqref{eq:k1}, Table~\ref{tab:fh} and the class numbers. We have computed all of them for $m\le12045$ in exact rational arithmetic and checked \eqref{eq:cond} for each (Appendix~\ref{app:code}). The smallest value of the ratio $a_m\max(m,2)/(24|a_0|\sigma(m))$ occurs at $m=1$ in every case and equals $1.333\ldots$ for $6A$ with $\mu=0$; the ratio grows faster than any power of $m$ (Figure~\ref{fig:margins}).
+For $1\le m<11000$ the coefficients $a_m$ of the fourteen series $k_\mu$ are rational numbers that can be computed exactly from \eqref{eq:R}--\eqref{eq:k1}, Table~\ref{tab:fh} and the class numbers. We have computed all of them for $m\le12045$ in exact rational arithmetic and checked \eqref{eq:cond} for each (Appendix~\ref{app:code}). The first coefficients are listed in Table~\ref{tab:first}. The smallest value of the ratio $a_m\max(m,2)/(24|a_0|\sigma(m))$ occurs at $m=1$ in every case and equals $2\cdot1536/(24\cdot96)=\frac43$ for $6A$ with $\mu=0$; the ratio grows faster than any power of $m$ (Figure~\ref{fig:margins}).
 
 \begin{proof}[Proof of Theorem~\ref{thm:C}]
 Let $D>0$ and write $D=4n'-\mu$ with $\mu\in\{0,1\}$ and $n'\ge1$ (the cases $D\equiv1,2\pmod 4$ do not occur). By Corollary~\ref{cor:large} and the exact computation, $k_\mu$ satisfies \eqref{eq:cond}. Lemma~\ref{lem:positivity} with $n=n'+1\ge2$ gives $[q^{n'+1}]k_\mu/(q)_\infty^{24}>0$, and Proposition~\ref{prop:majorant} gives $d(D)>\sum_{b\ne0}|d_{g^b}(D)|$.
@@ -571,6 +571,28 @@ $5A$ & $25.472$ & $3.889$ & 112 & $-80$ & $-9$ & 4914 & 7784\\
 $6A$ & $16.336$ & $5.222$ & 240 & $-96$ & $-12$ & 4005 & 6343\\
 $7A$ & $42.763$ & $5.250$ & 108 & $-84$ & $-15$ & 6810 & 10792\\
 $8A$ & $20.511$ & $6.444$ & 216 & $-96$ & $-18$ & 4645 & 7356\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{The first coefficients $a_0,\dots,a_3$ of the comparison series $k_0$ and $k_1$ of Section~\ref{sec:majorant}.}
+\label{tab:first}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{crrrrrrrr}
+\toprule
+& \multicolumn{4}{c}{$k_0$} & \multicolumn{4}{c}{$k_1$}\\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+$g$ & $a_0$ & $a_1$ & $a_2$ & $a_3$ & $a_0$ & $a_1$ & $a_2$ & $a_3$\\
+\midrule
+$2A$ & $-64$ & 1652 & 21434 & $\tfrac{470896}3$ & 0 & $\tfrac{1286}3$ & 11205 & 99176\\
+$3A$ & $-72$ & 1710 & 21891 & 159672 & $-3$ & 444 & 11403 & 98952\\
+$4B$ & $-80$ & 1620 & 21210 & 156880 & $-6$ & 406 & 11109 & 98792\\
+$5A$ & $-80$ & 1704 & 22140 & $\tfrac{478856}3$ & $-9$ & 488 & 11497 & 99416\\
+$6A$ & $-96$ & 1536 & 20844 & 156640 & $-12$ & $\tfrac{926}3$ & 10813 & 98024\\
+$7A$ & $-84$ & 1674 & 22191 & 159564 & $-15$ & 438 & 11583 & 99546\\
+$8A$ & $-96$ & 1564 & 21110 & 156720 & $-18$ & 334 & 10965 & 98552\\
 \bottomrule
 \end{tabular}
 \end{table}
