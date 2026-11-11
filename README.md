@@ -13,3 +13,5 @@ Paper (`paper/main.tex`, `paper/main.pdf`) and the programs that check it.
 Run the programs inside `code/`. Requires Python 3 with python-flint, sympy, mpmath, numpy and matplotlib.
 
 Author: Deep Bhattacharjee. Licence: see `LICENSE`.
+
+DOI: https://doi.org/10.5281/zenodo.24123192 (all versions)
